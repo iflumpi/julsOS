@@ -9,7 +9,9 @@ scripts_folder=$PWD/../../src/scripts
 cd $root_folder/
 make &&
 cp build/boot.bin $current_folder
+
 cd $current_folder
 nasm graphics.asm -f bin -i../../src/asm/util -o graphics.bin &&
-$scripts_folder/addfile.sh boot.bin graphics.bin game 5
+
+$scripts_folder/addfile.sh boot.bin graphics.bin graphics 5
 
